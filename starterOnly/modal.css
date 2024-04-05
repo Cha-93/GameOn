@@ -527,3 +527,50 @@ footer {
   }
 }
 
+
+/* Style pour formulaire */
+
+
+.valideButton {
+  display: flex;
+  justify-content: center;
+}
+
+.valideButton button {
+
+    background: #fe142f;
+    margin-top: 0.5em;
+    padding: 1em;
+    color: #fff;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 16px;
+    border : none;
+  }
+  
+  .valideButton button :hover {
+    background: #3876ac;
+  }
+
+/* espace message de remerciement */
+  
+.valideMessage {
+
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 450px;
+
+}
+
+#valideContainer {
+  display: none;
+}
+
+
+.msgError {
+  font-size: 10px;
+  color: red;
+  display: none;
+}

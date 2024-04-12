@@ -99,12 +99,16 @@ function validate() {
 
     }
 
+    let regex = new RegExp("^[\w\.]+@([\w-]+\.)+[\w-]{2,4}$");
+
 
     // Conditions de validation du champ Email
-    if (email.length == 0 || email.includes("@") == false ) {
+    if (email.length == 0 || email.match(regex) == false ) {
         isFormValide = false;
         errorEmail.innerHTML="Veuillez entrer une adresse mail."
         errorEmail.style.display="block"
+
+       
         
 
     }

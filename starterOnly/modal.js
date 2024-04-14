@@ -99,19 +99,35 @@ function validate() {
 
     }
 
-    let regex = new RegExp("^[\w\.]+@([\w-]+\.)+[\w-]{2,4}$");
+    
+
+    //  Déclaration de variable avec clé
+    const regex = /^[\w\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+
 
 
     // Conditions de validation du champ Email
-    if (email.length == 0 || email.match(regex) == false ) {
-        isFormValide = false;
-        errorEmail.innerHTML="Veuillez entrer une adresse mail."
-        errorEmail.style.display="block"
+    if (regex.test(email) == false) {
+    isFormValide = false;
+    errorEmail.innerHTML="Veuillez entrer une adresse mail."
+    errorEmail.style.display="block"
 
-       
-        
+   
+    
 
     }
+    // Conditions de validation du champ Email
+    if (email.length == 0) {
+    isFormValide = false;
+    errorEmail.innerHTML="Veuillez entrer une adresse mail."
+    errorEmail.style.display="block"
+
+   
+    
+
+    }
+
+
 
     // Conditions de validation du champ nombre de tournois
     if (quantity.length > 0){

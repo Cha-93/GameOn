@@ -61,7 +61,7 @@ function validate() {
     const checkbox2 = document.getElementById("checkbox2").checked;
 
     
-// Réinitialisation des messages d'erreur
+    // Réinitialisation des messages d'erreur
 
         errorPrenom.innerHTML=""
         errorNom.innerHTML=""
@@ -71,7 +71,7 @@ function validate() {
         errorTournois.innerHTML=""
         errorDate.innerHTML=""
     
-// Déclaration de la variable qui sert à déterminer si le formulaire est valide ou non
+    // Déclaration de la variable qui sert à déterminer si le formulaire est valide ou non
     let isFormValide = true;
 
 
@@ -105,25 +105,19 @@ function validate() {
     const regex = /^[\w\.]+@([\w-]+\.)+[\w-]{2,4}$/;
 
 
-
     // Conditions de validation du champ Email
     if (regex.test(email) == false) {
     isFormValide = false;
     errorEmail.innerHTML="Veuillez entrer une adresse mail."
     errorEmail.style.display="block"
-
    
-    
-
     }
+
     // Conditions de validation du champ Email
     if (email.length == 0) {
     isFormValide = false;
     errorEmail.innerHTML="Veuillez entrer une adresse mail."
     errorEmail.style.display="block"
-
-   
-    
 
     }
 

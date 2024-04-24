@@ -11,7 +11,6 @@ function editNav() {
 // DOM Elements récupère les balises html
 const modalbg = document.querySelector(".bground");
 const modalBtn = document.querySelectorAll(".modal-btn");
-const formData = document.querySelectorAll(".formData");
 const modalBtnClose = document.querySelector(".close");
 const formCloseBtn = document.getElementById("valideClose");
 const errorPrenom = document.getElementById("msgErrorPrenom");
@@ -24,7 +23,6 @@ const errorDate = document.getElementById("msgErrorDate");
 
 // launch modal event ( événement qui lance la pop up )
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
-
 
 
 // ligne suivante action fermeture pop up click X
@@ -43,6 +41,8 @@ function launchModal() {
 function closeModal() {
 
     modalbg.style.display = "none";
+    // Rechargez la page
+    window.location.reload();
 
 }
 
@@ -58,7 +58,7 @@ function validate() {
     const quantity = document.getElementById("quantity").value;
     const location = document.getElementsByName("location");
     const checkbox1 = document.getElementById("checkbox1").checked;
-    const checkbox2 = document.getElementById("checkbox2").checked;
+   
 
     
     // Réinitialisation des messages d'erreur

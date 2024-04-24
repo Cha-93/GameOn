@@ -462,6 +462,7 @@ input[data-error]::after {
   height: 100%;
   display: block;
   padding: 0;
+  object-fit: cover;
 }
 .copyrights {
   color: #fe142f;
@@ -569,6 +570,7 @@ footer {
 }
 
 
+/* Apparence du message d erreur */
 .msgError {
   font-size: 10px;
   color: red;
